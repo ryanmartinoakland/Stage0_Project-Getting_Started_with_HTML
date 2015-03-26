@@ -1,0 +1,131 @@
+
+
+<!DOCTYPE html>
+
+<!-- I didn't really take as thorough of notes as the notes that are provided for example, so i used a lot of the example notes just so i could demonstrate with my html code all the stuff we learned in the lesson -->
+<html class="whole-page">
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>My UDACITY Nanodegree</title>
+		<meta charset="UTF-8">
+	</head>
+<body>
+	<img class="img1" src="images/me.jpg" alt="my mug">
+	<h1 class="title">
+		
+			Ryan's UDACITY class notes
+            <br>
+		    <br>
+		
+	</h1>
+<br>
+
+		<div class="lesson1">
+<b>Lesson 1: The Basics of the Web and HTML</b>
+<br><br>
+<em>How the Web Works</em> 
+<br>
+&nbsp;&nbsp;&nbsp;The web is a bunch of computers that communicate with each other. When a person goes to a web page like www.google.com, their computer sends a HTTP Request to a server.The server finds the appropriate HTML document and sends it back to the user's computer where a web browser interprets the page and displays it on the user's screen. This video does a good job of explaining more. 
+<br><br>
+<em>HTML:</em>
+<br>
+&nbsp;&nbsp;&nbsp;HTML stands for Hypertext Markup Language. HTML documents form the majority of the content on the web.HTML documents contain text content which describes "what you see" and markup which describes "how it looks". This video gives a good overview. 
+<br><br>
+<em>Tags and Elements:</em>
+<br>
+&nbsp;&nbsp;&nbsp;HTML documents are made of HTML elements. When writing HTML, we tell browsers the type of each element by using HTML tags. This video explains the distinction well. 
+<br><br>
+<em>Why Computers are Stupid:</em>
+<br>
+&nbsp;&nbsp;&nbsp;Computers are stupid because they interpret instructions literally. This makes them very unforgiving since a small mistake by a programmer can cause huge problems in a program. 
+<br><br>
+<em>Inline vs Block Elements:</em> 
+<br>
+&nbsp;&nbsp;&nbsp;HTML elements are either inline or block. Block elements form an "invisible box" around the content inside of them. 
+<br>      
+       </div>  
+<br><br>
+
+       <div class="lesson2">
+<b>Lesson 2: Creating a Structured Document with HTML</b>
+<br><br>
+<em>Developer Tools (in the Browser):</em>
+<br> 
+&nbsp;&nbsp;&nbsp;HTML elements are either inline or block. Block elements form an "invisible box" around the content inside of them. 
+<br><br>
+<em>The "tree-like structure" of HTML:</em>
+<br> 
+&nbsp;&nbsp;&nbsp;The "tree-like structure" comes from the fact that HTML elements can have other elements inside of them. You can draw this relationship like a family tree. My mother had multiple children. So did her mother, and so on... In a browser, this structure shows up as a series of nested boxes. There are boxes inside of boxes inside of boxes, and so on... The relationship between indented HTML and boxes When you read an HTML document as text, you see a wave of changing indentations going up and down the left side of the document. The more indented an element is, the more deeply nested its corresponding "box" is. 
+<br><br>
+<em>Text Editors (for programming):</em>
+<br> 
+&nbsp;&nbsp;&nbsp;When writing code, programmers use special text editors (like Sublime Text for example). These editors make the programmer's life easier. For example, some text editors will automatically generate a closing HTML tag when you write an opening tag. 
+       </div>
+<br><br>
+
+		<div class="lesson3">
+<b>Lesson 3: Adding Style to Structure with CSS</b>
+<br><br>
+<em>In-page Styling vs. Linking to a CSS File:</em>
+<br>
+&nbsp;&nbsp;&nbsp;Adding a link to a style sheet can be done in the head tags... by using "link". BUT, you can also apply style directly, without having to use a separate file and link tag. You can do so by using the style tags. 
+<br><br>
+<em>CSS Order Rules:</em>
+<br>
+&nbsp;&nbsp;&nbsp;You can also think about CSS as a search and replace tool: you identify a class or a tag of the element you want to find (or match, in CSS terminology), and then what you want to do with it, or what property values to replace with different ones. 
+<br><br>
+<em>Order Matters:</em>
+<br>
+&nbsp;&nbsp;&nbsp;It also matters where you define the rules and in what order they are applied. Styles can be defined in different places and are applied in order, with definitions further down the list overwriting previous definitions: 
+<br><br>
+<em>Specifics Matter:</em>
+<br>
+&nbsp;&nbsp;&nbsp;"Cascading" means that rules are applied not only to the elements they directly match, but also to all of those elements' child elements. However, if a child element has multiple, overlapping rules defined for it, the more specific rule takes effect. In general, descendant elements inherit text-related properties, but box-related properties are not inherited. Properties that can be inherited are color, font, letter-spacing, line-height, list-style, text-align text-indent, text-transform, visibility, white-space and word-spacing. Properties that cannot be inherited are background, border, display, float and clear, height and width, margin, min- and max-height and -width, outline, overflow, padding, position, text-decoration, vertical-align and z-index. Inheritance prevents certain properties from being declared over and over again in a style sheet, allowing the software developers to write less CSS. It enhances faster-loading of web pages by users and enables the clients to save money on bandwidth and development costs. 
+<br><br>
+<em>Using the right elements:</em>
+<br>
+&nbsp;&nbsp;&nbsp;When creating HTML and CSS for your page, your elements should choose the right element for the right content. As an example, if you have a title to an article, that's only text. In HTML, instead of using a DIV tag, it would be more appropriate to use the H1 tag, as that is meant for text/titles. (Especially when your webpage is indexed by search engines) Another reason to do so, relates back to inheritance. You can apply styling to the H1 tag as an example, and wrap the H1 element in a DIV tag with different styling. It's a way to add even more control over styling of each page element. (But be cautious, this can get out of hand pretty quick.) 
+<br><br>
+<em>Box Models:</em>
+<br>
+&nbsp;&nbsp;&nbsp;The box model is important to understand.The "content" can be text or an image... whatever. Around that is the padding, then the border, then the margin. Each of these can be controlled in CSS, and also each behave a bit differently. The margin, border, and padding can have their own attributes, including color, style, width, and so on. The CSS reference page is a big help here, because there are a lot of things you can do to each.
+<br><br>
+<em>Wide Boxes:</em>
+<br>
+&nbsp;&nbsp;&nbsp;Keeping the box model in mind, there are a few things to know. Each of the 'boxes' (margin, border, padding, and the content) all have width. Now, you don't *have* to assign a width value to them, but the content will always have width. If you do plan to use padding, and set width values, be mindful that they all add up. So in other words, if you assign a width to each, you have to total those all up, and that's how much actual width your element will use on a page. One way around having to constantly calculate how much width is used, you can use the CSS style called "box-sizing: border-box;" This allows you to set the box width, and it will auto-adjust it. (It doesn't include the margin in this though) 
+There is a small problem to using this -- older browsers don't support this CSS style. By using browser-specific code/prefixes for the box-sizing style, you can get around it, but it's not perfect (yet). Another way to handle box sizing, is to use percentages for the sizing. It adjusts the sizing based on the size of your screen or browser window. But there are limitations to this as well. If you resize too large or too small, because it's based on percentage, this could have some unexpected effects.
+But, there is a way to combat this as well. You can use 'max-width' styling in CSS, so when resizing, or if viewed on a screen larger than you expected, it will prevent the page from expanding too far and looking strange. 
+<br><br>
+<em>Test and Revise:</em>
+<br>
+&nbsp;&nbsp;&nbsp;When writing code, you will need to test your work to see if it actually does what you expect it to. It's also standard practice in software development, since a bug can make or break your program (or in the case of web design, can cause your page to display really weird, or not at all)Whenever possible, view your site in other browsers... Firefox, IE, on your iPad or Android device... this will give you a really good idea of how your code works and how it works in other environments. 
+<br><br>
+<em>Validate</em>
+<br>
+&nbsp;&nbsp;&nbsp;Both HTML and CSS have a specific format that they need to be written in to work. The browser does it's best to interperet and display the page even if you don't quite get your HTML and CSS 100% correct. 
+<br><br>
+To verify HTML:
+<br><a href="http://validator.w3.org/#validate_by_input"> The validator for HTML can be found here.</a>
+<br><br>
+To verify CSS:
+<br>
+<a href="http://jigsaw.w3.org/css-validator/#validate_by_input">The validator for CSS can be found here.</a>
+<br>		
+		</div>
+<br><br>
+
+		<div class="project1">
+			<b>Project Requirements:</b>
+<br><br>
+        <em>Understanding of Structured Documents: Your notes should demonstrate an understanding of what it means for computer code to be "structured.":
+        </em>
+<br>
+&nbsp;&nbsp;&nbsp;Computer code needs to be structured for troubleshooting purposes and readability. If all my code was just thrown on one line, it would be nearly impossible to go back and fix little mistakes while putting my page together.
+<br><br>
+
+		<em>The Importance of Avoiding Repetition: Your notes should contain some explanation of why it's important to avoid repetition when coding.:</em>
+<br>
+&nbsp;&nbsp;&nbsp;It is important to user CSS and inheritant properties to save me time and writing unnecessary code. It also loads faster web pages by users and saves money on bandwidth and development costs. 
+		</div>
+	</body>
+</html>
